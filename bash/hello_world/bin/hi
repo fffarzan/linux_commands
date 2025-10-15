@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "From: $USER"
+echo "Today's date is $(date)"
+echo "hello everyone :)"
+
+echo "ran hi file at $(date)" >> hi.log

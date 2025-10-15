@@ -1,0 +1,13 @@
+#!/bin/bash
+
+case $1 in
+-3)
+    curl "wttr.in"
+    ;;
+-l | --location) 
+    curl "wttr.in/$2"
+    ;;
+*)
+    curl "wttr.in?m1"
+    ;;
+esac
