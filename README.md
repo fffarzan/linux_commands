@@ -31,41 +31,6 @@ echo fffarzan # returns fffarzsn
 rm <filename>
 ```
 
-# NAVIGATION
-
-the root directory: "/"
-the home directory : "~"
-relative path: relative to current directory
-absolute path: starts with "/", from root directory
-bin directory: bunch of built-in executable programs like pwd
-etc directory: configuration files and scripts
-var directory: related to logging and log files, caches
-usr directory: executable files of programs that we installed
-
-```bash
-open /
-open ~
-
-pwd # print working directory
-
-ls
-ls <directory>
-ls -l <filename> # long listing format. with accessibilities
-ls -a <filename> # all. includes hidden ones
-ls -la <filename>
-ls -h <filename> # human readable (specially as -lh)
-ls --sort=WORD <filename> # time, size, none, version, extension --> ubuntu :(
-ls -t <filename> # sort by time modified
-ls -1 <filename> # remove first line that shows the total number
-
-cd # change directory
-cd . # current directory
-cd .. # parent directory
-cd <directory>
-cd ~ # home
-cd / # root
-```
-
 # FILES & FOLDERS
 
 ```bash
