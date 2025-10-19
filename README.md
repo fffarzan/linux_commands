@@ -42,55 +42,6 @@ delete the char under the cursor --> ctrl + d
 delete from the current cursor to beginning of the current word --> ctrl + w
 revive killed text --> ctrl + y
 
-# HISTORY
-
-it's a file: ~/.bash_history (no on mac?!)
-
-```bash
-history
-history | less
-!<number of line> # run the command of that line in history
-echo $HISTSIZE # size of history stored in memory
-```
-
-ctrl + r --> search in history
-
-```bash
-cat <filename> # concatinate. if you set one input, it just displays the content
-cat <file1> <file2> # combine files to show
-cat -n # show content with number of lines
-
-less <filename> # open a content with interactive view
-
-tac <filename> # concatinate files like cat but in a reverse mode! Just reversing what is printing out # doesn't exist on mac.
-
-rev <filename> # reverse every character in a horizontal line! Just reversing what is printing out
-
-head <filename> # head of the file. Shows first 10 lines
-head -n <number> <filename> # number of lines
-head -<number> <filename>
-head -c <number> <filename> # specific number of bytes
-tail <filename>
-tail -n  <number> <filename>
-tail -<number> <filename>
-tail -c <number> <filename>
-tail -f <filename> # interesting (best usage: tail -f syslog --> to monitor last logs immediately)
-
-wc <filename> # word count. lines, words, bytes
-wc -l # lines
-wc -w # words
-wc -c # bytes
-wc -m # chars
-
-sort <filename>
-sort <filname> -r # reverse
-sort <filename> -u # unique only
-sort -n # for numerical values and prevernt to mess fload values
-sort -k<number> # sort the kth column of the list
-sort -h # human readable sort
-sort -k<number>h
-```
-
 # STREAM
 
 ```bash
