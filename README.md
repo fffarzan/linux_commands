@@ -31,50 +31,6 @@ echo fffarzan # returns fffarzsn
 rm <filename>
 ```
 
-# FILES & FOLDERS
-
-```bash
-touch <filename> # create file. It doesn't care about extension. / update modification and access time of a file (:/)
-touch ../<filename> # just give it a path. It'll create the file in the path
-touch ~/<filename>
-
-file <filename> # show the basic type of the file
-
-mkdir <absolute path>
-mkdir <relative path>
-mkdir -p <path/to/dirs> # for nested directories
-
-nano <filename> # if the file doesn't exist, it'll create it.
-
-rm <filename or path> # filename is actually a relative path
-rm -d <path> # remove empty directortes
-rmdir <path> # remove empty directortes
-rm -r # remove directories and all their contents recursively
-rm -R # as above
-rm -i # remove like interactive mode to make sure what you wanna delete
-
-mv <source> <destination> # can be folders or files even mixed together
-mv <source> . # move to current folder
-mv source1 source2 ... destination # just one destination
-mv <current name> <new name> # change file or folders namec
-
-cp <source> <destination> # copy. can have multiple sources
-cp -r # copy dirs with its contents
-cp -v # with verbose output
-```
-
-in an opened file with nano:
-^A: start of line
-^E: end of line
-^P: prev line
-^N: next line
-^Y: prev page
-^V: next page
-^I: insert a tab
-^W: search
-wrapping lines in nano (nano softwrap): ???
-Note: nano is different in some shortcuts on mac and linux
-
 # SHORTCUTS
 
 clear --> ctrl + l
