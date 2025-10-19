@@ -14,11 +14,13 @@
 - type COMMAND --> where or how a command is defined (in a file, as shell command, as alias )
 - which COMMAND --> where a command is located
 
-### Commands
+### whoami
 
 ```bash
 whoami # returns the name of current user
 ```
+
+### who
 
 ```bash
 who # returns who is on the system
