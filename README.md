@@ -91,20 +91,20 @@ du -ha <path> # size of folder and files in a human readable shape
 
 wildcard chars (glob patterns):
 
-- "\*": expansion to every single directory that is matched
+- "": expansion to every single directory that is matched
 - "?": exactly one char
 - "~": expanding to my home directory
 - "[]": Range of something
 - "^": not starting with something
 - "{}": to generate arbitrary strngs
-- "$((+ - \* /\ \*\* %))": arithmatic
+- "$((+ -  /\  %))": arithmatic
 - "$": find the variable with the following name
-- "\": escape meta-chars
+- ": escape meta-chars
 
 regex:
 
-- "\*": repeat prev expression
-- "[\^abc]": matches any char NOT in set
+- "": repeat prev expression
+- "[abc]": matches any char NOT in set
 - "^": start with an expression
 - "$": matches end of line
 - ".": matches any single char
@@ -164,7 +164,6 @@ logical operators:
 - -and
 - -or
 - -not
-
 - NOTE: grep takes regex not glob patterns! glob patterns are for dirs and filenames but regex related to contents.
 
 ```bash
@@ -231,17 +230,14 @@ find . -name "*.txt" ! -empty -type f -exec grep -il "tomat[oe]" '{}' ';' # awes
 10 digits to show accesses:
 
 - first col: file type:
-
   - "-" file
   - "d" dir
   - "c" char special file
   - "l" symbolic link (shortcut)
   - "b" block special files
-
 - first three cols (ignoring first col) --> owener
 - second three cols --> group
 - thirst three cols --> world
-
   - first letter: "r" or "-": file: read / dir: contents can be listed
   - second letter: "w" or "-": file: modifying / dir: creating file, renaming files or dirs but only if x is set for third letter
   - third letter: "x" or "-": file: can be treated as a program to be executed / dir: allows a dir to be entered or "cd"ed (cd is best test for seeing access to a dir or not!)
@@ -307,7 +303,7 @@ In PS1:
 
 - "%n": username
 - "%m": hostname
-- "%<number>~": current working dir from $HOME. number is the amount of dirs that'ss gonna be shown.
+- "%~": current working dir from $HOME. number is the amount of dirs that'ss gonna be shown.
 - "%d": current working dir
 - "%B%{}%b": bold
 - "%F{}%f": foreground color
@@ -346,3 +342,17 @@ bash <path/to/filename>
 
 export PATH="$PATH:our/path/to/file" # adding new path to $PATH var
 ```
+
+
+
+# ALIAS
+
+```bash
+nano ~/.zshrc
+# or
+nano ~/.zsh_aliases
+
+# after set new alias:
+source ~/.zsh_aliases
+```
+
